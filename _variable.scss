@@ -1,0 +1,36 @@
+/*Primary color*/
+
+$Red: hsl(0, 100%, 74%);
+$Green: hsl(154, 59%, 51%);
+$Blue: hsl(248, 32%, 49%);
+$DarkBlue: hsl(249, 10%, 26%);
+$GreyishBlue: hsl(246, 25%, 77%);
+
+/*Neutral color*/
+
+$large_screen: 900px;
+
+$medium_screen: 650px;
+$medium_screenm: 1000px;
+$medium_screenl: 1300px;
+
+@mixin large {
+  @media (min-width: $large_screen) {
+    @content;
+  }
+}
+@mixin medium {
+  @media (min-width: $medium_screen) {
+    @content;
+  }
+}
+@mixin mmedium {
+  @media (max-width: $medium_screenm) {
+    @content;
+  }
+}
+@mixin lmedium {
+  @media (min-width: $medium_screenl) {
+    @content;
+  }
+}
